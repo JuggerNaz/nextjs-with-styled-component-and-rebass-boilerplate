@@ -1,25 +1,16 @@
 import styled from 'styled-components'
 import { Flex, Box, Text, Heading } from 'rebass'
 
+//local
+import { Row, Container, Header } from '../src/components/layout'
+
 const Title = styled.h1`
     color: red;
 `
 
-const Container = styled(Flex)`
-    border: 1px solid red
-`
-
 export default () => (
-    <Container
-        width={1}
-        p={3}
-        justifyContent='center'
+    <Row
     >
-        <Heading
-            fontSize={[5, 6, 7]}
-            color='primary'
-        >
-            Salam!
-        </Heading>
-    </Container>
+        <Header/>
+    </Row>
 )
