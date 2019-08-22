@@ -1,6 +1,7 @@
 import React from 'react'
 import { Flex, Box, Heading, Text } from 'rebass'
 import styled from 'styled-components'
+import * as faRegular from 'styled-icons/fa-regular/'
 
 //local
 import Container from './Container'
@@ -16,9 +17,15 @@ const CTAButton = styled.a`
     width: 200px;
     font-size: 18px;
     border-radius: 5px;
-    background: red;
+    background: #480E87;
     text-align: center;
-    margin: 15px 0px;
+    margin: 30px 0px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);            
+`
+const Handshake = styled(faRegular.Handshake)`
+    color: #fff;
 `
 
 const Header = props =>
@@ -26,6 +33,7 @@ const Header = props =>
         bleed={true}
         height={['200px','300px']}
         flexDirection='column'
+        color='white'
     >
         <Navbar />
         <Container
@@ -34,11 +42,19 @@ const Header = props =>
         >
             <Container
                 mt={4}
-                flexDirection='column'
+                flexDirection='row'
+                justifyContent='space-between'
             >
-                <Text>Welcome to Salam App! </Text><br/>
-                <Heading>Let's 'bersalaman' to get closer!</Heading>
-                <CTAButton>Let's Jom!</CTAButton>
+                <Flex
+                    flexDirection='column'
+                >
+                    <Text>Welcome to Salam App! </Text><br />
+                    <Heading>Let's 'bersalaman' to get closer!</Heading>
+                    <CTAButton>Let's Jom!</CTAButton>
+                </Flex>
+                <Box>
+                    <Handshake size='170' />
+                </Box>
             </Container>
         </Container>
     </CustomContainer>
