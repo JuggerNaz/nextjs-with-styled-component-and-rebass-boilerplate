@@ -13,8 +13,8 @@ const Navlink = styled(Link)`
 const Navbar = props =>
     <Flex
         alignItems='center'
-        px={3}
-        py={4}
+        px={[2, 5]}
+        py={3}
         width={1}
         height='50px'
         color='white'
@@ -29,14 +29,14 @@ const Navbar = props =>
                 mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.5)',
                 boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.5)'
             }}
-        >Beep</Button>
+        >Login</Button>
         <Button ml={2} bg='#480E87'
             style={{
                 webkitBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.5)',
                 mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.5)',
                 boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.5)'
             }}
-        >Boop</Button>
+        >Register</Button>
     </Flex>
 
 export default Navbar
