@@ -16,8 +16,15 @@ const Button = styled(ButtonBase)`
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
 `
 
+const NavBarContainer = styled(Flex)`
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    border-bottom: 1px solid #ececec;
+`
+
 const Navbar = props =>
-    <Flex
+    <NavBarContainer
         alignItems='center'
         px={[2, 5]}
         py={3}
@@ -41,6 +48,6 @@ const Navbar = props =>
         >
             Register
         </Button>
-    </Flex>
+    </NavBarContainer>
 
 export default Navbar

@@ -11,6 +11,8 @@ import CtaButton from '../core/CtaButton'
 const CustomContainer = styled(Container)`
     background: rgb(134,37,205);
     background: linear-gradient(45deg, rgba(134,37,205,1) 0%, rgba(200,49,216,1) 100%);
+    -webkit-box-shadow: inset 0px -5px 7px -5px rgba(0,0,0,0.5); 
+    box-shadow: inset 0px -5px 7px -5px rgba(0,0,0,0.5);
 `
 
 const Handshake = styled(faRegular.Handshake)`
@@ -23,7 +25,6 @@ const Header = props =>
         flexDirection='column'
         color='white'
     >
-        <Navbar />
         <Container
             bleed={true}
             justifyContent='center'
