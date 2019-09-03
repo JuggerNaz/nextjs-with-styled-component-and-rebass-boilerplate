@@ -4,7 +4,7 @@ import { Flex, Box, Heading, Button as ButtonBase, Link } from 'rebass'
 
 const Navlink = styled(Link)`
     text-decoration: none;
-    color: white;
+    color: #480E87;
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -20,7 +20,7 @@ const NavBarContainer = styled(Flex)`
     position: fixed;
     top: 0px;
     left: 0px;
-    border-bottom: 1px solid #ececec;
+    background: rgba(255,255,255,0.25);
 `
 
 const Navbar = props =>
@@ -30,7 +30,7 @@ const Navbar = props =>
         py={3}
         width={1}
         height='50px'
-        color='white'
+        color='#480E87'
     >
         <Heading>Salam App</Heading>
         <Box mx='auto' />

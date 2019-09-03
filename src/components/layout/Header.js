@@ -5,7 +5,6 @@ import * as faRegular from 'styled-icons/fa-regular/'
 
 //local
 import Container from './Container'
-import Navbar from '../core/Navbar'
 import CtaButton from '../core/CtaButton'
 
 const CustomContainer = styled(Container)`
@@ -16,7 +15,8 @@ const CustomContainer = styled(Container)`
 `
 
 const Handshake = styled(faRegular.Handshake)`
-    color: #fff;`
+    color: #fff;
+`
 
 const Header = props =>
     <CustomContainer 
@@ -30,15 +30,16 @@ const Header = props =>
             justifyContent='center'
         >
             <Container
-                mt={4}
+                mt={5}
                 flexDirection='row'
                 justifyContent='space-between'
             >
                 <Flex
                     flexDirection='column'
+                    mt={4}
                 >
                     <Text>Welcome to Salam App! </Text><br />
-                    <Heading>Let's 'bersalaman' to get closer!</Heading>
+                    <Heading as='h1'>Let's 'bersalaman' to get closer!</Heading>
                     <CtaButton>Let's Jom!</CtaButton>
                 </Flex>
                 <Box>
