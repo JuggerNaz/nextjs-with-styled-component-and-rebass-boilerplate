@@ -39,7 +39,13 @@ const Header = props =>
                     mt={4}
                 >
                     <Text>Welcome to Salam App! </Text><br />
-                    <Heading as='h1'>Let's 'bersalaman' to get closer!</Heading>
+                    <Heading 
+                        as='h1'
+                        fontFamily='nunito'
+                        letterSpacing='1px'
+                    >
+                        Let's 'bersalaman' to get closer!
+                    </Heading>
                     <CtaButton>Let's Jom!</CtaButton>
                 </Flex>
                 <Box>

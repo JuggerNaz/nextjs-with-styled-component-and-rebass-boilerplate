@@ -9,6 +9,7 @@ const Title = props =>
         color='#480E87'
         fontSize='35px'
         fontWeight='bold'
+        fontFamily='nunito'
     >
         { props.text }
     </Heading>
