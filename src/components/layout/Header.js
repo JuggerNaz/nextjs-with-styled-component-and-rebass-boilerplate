@@ -24,6 +24,7 @@ const Header = props =>
         height={['200px','300px']}
         flexDirection='column'
         color='white'
+        px={2}
     >
         <Container
             bleed={true}

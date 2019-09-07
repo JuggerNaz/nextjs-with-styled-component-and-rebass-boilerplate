@@ -27,6 +27,7 @@ export default class MyApp extends App {
                 <style global jsx>{`
                 body {
                     font-family: 'Nunito', sans-serif;
+                    later-spacing: 0.5px;
                 }
                 `}</style>
             </Container>

@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Flex, Box, Heading, Button as ButtonBase, Link } from 'rebass'
+import { Flex, Box, Heading, Link } from 'rebass'
+
+//local
+import Button from './Button'
 
 const Navlink = styled(Link)`
     text-decoration: none;
@@ -8,12 +11,6 @@ const Navlink = styled(Link)`
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 1px;
-`
-
-const Button = styled(ButtonBase)`
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
 `
 
 const NavBarContainer = styled(Flex)`
@@ -36,16 +33,10 @@ const Navbar = props =>
         <Box mx='auto' />
         <Navlink href='#about' ml={2}>How</Navlink>
         <Navlink href='#readmore' ml={2}>Testimoni</Navlink>
-        <Button 
-            ml={2} 
-            bg='#480E87'
-        >
+        <Button>
             Login
         </Button>
-        <Button 
-            ml={2} 
-            bg='#480E87'
-        >
+        <Button>
             Register
         </Button>
     </NavBarContainer>

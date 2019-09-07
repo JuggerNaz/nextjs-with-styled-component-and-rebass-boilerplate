@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Flex, Box, Text, Heading } from 'rebass'
 
 const Button = styled.a`
     padding: 15px 0px;
@@ -12,7 +11,9 @@ const Button = styled.a`
     margin: 30px 0px;
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);            
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    letter-spacing: 0.5px;
+    font-weight: 700;
 `
 
 const CtaButton = props =>
