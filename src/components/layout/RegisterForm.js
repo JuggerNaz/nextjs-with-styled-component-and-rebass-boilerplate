@@ -1,9 +1,10 @@
 import { Form, Text } from 'informed'
 import styled from 'styled-components'
+import { Heading, Flex } from 'rebass'
 
 const StyledFormText = styled(Text)`
     display: block;
-    padding: 10px;
+    padding: 15px;
     border-radius: 0px 3px 3px 3px;
     border: 1px solid #8625CD;
     width: 92%;
@@ -13,7 +14,10 @@ const StyledFormText = styled(Text)`
     margin-top: -1px;
     -webkit-box-shadow: inset 0px 0px 2px 0px rgba(134,37,205,1);
     -moz-box-shadow: inset 0px 0px 2px 0px rgba(134,37,205,1);
-    box-shadow: inset 0px 0px 2px 0px rgba(134,37,205,1);      
+    box-shadow: inset 0px 0px 2px 0px rgba(134,37,205,1);
+    background: #f7f7f7;
+    font-size: 14px;
+
 `
 
 const StyledForm = styled(Form)`
@@ -48,6 +52,62 @@ const StyledButton = styled.button`
     border:none;
 `
 
+const FormHeading = styled(Heading)`
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+    background: #FFF;
+    padding: 2px 10px;
+    color: #333;
+    font-size: 35px;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    text-shadow: 
+		1px 1px 0px #FFF, 
+		2px 2px 0px #999,
+		3px 3px 0px #FFF;
+	background-image: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,.05) 100%);
+	-webkit-transition: 1s all;
+	background-image: -webkit-linear-gradient(left top, 
+		transparent 0%, transparent 25%, 
+		rgba(0,0,0,.15) 25%, rgba(0,0,0,.15) 50%, 
+		transparent 50%, transparent 75%, 
+		rgba(0,0,0,.15) 75%);
+    background-size: 4px 4px;
+	box-shadow: 
+		0 0 0 1px rgba(0,0,0,.4) inset, 
+		0 0 20px -5px rgba(0,0,0,.4),
+		0 0 0px 3px #FFF inset;
+`
+
+const FormHeadingContainer = styled(Flex)`
+    width: 100%;
+    height: 80px;
+    position: relative;
+`
+
+const FormHeadingFirstBg = styled(Flex)`
+    height: 80%;
+    width: 100%;
+    z-index: 1;
+    background: #B92FD6;
+    border-radius: 3px;
+    position: absolute;
+    border: 3px solid #fff;
+`
+
+const FormHeadingSecondBg = styled(Flex)`
+    height: 100%;
+    width: 80%;
+    z-index: 2;
+    background: #8625CD;
+    position: absolute;
+    border-radius: 50% 3px 50% 3px;
+    border: 3px solid #fff;
+`
+
 const validate = value => {
     return !value || value.length < 5
         ? 'Field must be at least five characters'
@@ -56,6 +116,18 @@ const validate = value => {
 
 const RegisterForm = props =>
     <StyledForm>
+        
+        <FormHeadingContainer
+            alignItems='center'
+            justifyContent='center'
+            mb={2}
+        >
+            <FormHeading
+                as='h1'
+            >
+                Register
+            </FormHeading>
+        </FormHeadingContainer>
         <FormLabel>
             Name:
         </FormLabel>
@@ -68,6 +140,10 @@ const RegisterForm = props =>
             Password:
         </FormLabel>
         <StyledFormText field='password' validate={validate} />
+        <FormLabel>
+            Repeat Password:
+        </FormLabel>
+        <StyledFormText field='repeat' validate={validate} />
         <StyledButton type='submit'>Register</StyledButton>
     </StyledForm>
 
