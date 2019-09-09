@@ -11,6 +11,9 @@ const StyledFormText = styled(Text)`
     later-spacing: 0.5px;
     margin-bottom: 15px;
     margin-top: -1px;
+    -webkit-box-shadow: inset 0px 0px 2px 0px rgba(134,37,205,1);
+    -moz-box-shadow: inset 0px 0px 2px 0px rgba(134,37,205,1);
+    box-shadow: inset 0px 0px 2px 0px rgba(134,37,205,1);      
 `
 
 const StyledForm = styled(Form)`
@@ -61,6 +64,10 @@ const RegisterForm = props =>
             Email:
         </FormLabel>
         <StyledFormText field='email' validate={validate} />
+        <FormLabel>
+            Password:
+        </FormLabel>
+        <StyledFormText field='password' validate={validate} />
         <StyledButton type='submit'>Register</StyledButton>
     </StyledForm>
 
