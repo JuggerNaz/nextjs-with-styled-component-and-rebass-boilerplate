@@ -20,6 +20,12 @@ const NavBarContainer = styled(Flex)`
     background: rgba(255,255,255,0.25);
 `
 
+const NavLogo = styled(Heading)`
+    font-weight: 800;
+    font-size: 28px;
+    font-family: 'Nunito', sans-serif;
+`
+
 const Navbar = props =>
     <NavBarContainer
         alignItems='center'
@@ -29,10 +35,10 @@ const Navbar = props =>
         height='50px'
         color='#480E87'
     >
-        <Heading>Salam App</Heading>
+        <NavLogo>Salam App</NavLogo>
         <Box mx='auto' />
-        <Navlink href='#about' ml={2}>How</Navlink>
-        <Navlink href='#readmore' ml={2}>Testimoni</Navlink>
+        <Navlink href='#about' ml={2} px={3}>How</Navlink>
+        <Navlink href='#readmore' ml={2} px={3}>Testimoni</Navlink>
         <Button>
             Login
         </Button>

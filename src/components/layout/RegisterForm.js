@@ -17,7 +17,6 @@ const StyledFormText = styled(Text)`
     box-shadow: inset 0px 0px 2px 0px rgba(134,37,205,1);
     background: #f7f7f7;
     font-size: 14px;
-
 `
 
 const StyledForm = styled(Form)`
